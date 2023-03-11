@@ -28,5 +28,20 @@ public class oneArrayStacks {
     public int pop2(){
         return array[--count2];
     }
+    public boolean isEmpty1(){
+        return (count1==0) ? true : false;
+    }
+    public boolean isEmpty2(){
+        return (count2==0) ? true : false;
+    }
+    private boolean isFull(){
+        return count1+count2==array.length;
+    }
+    public boolean isFull1(){
+        return isFull();
+    }
+    public boolean isFull2(){
+        return isFull();
+    }
 
 }

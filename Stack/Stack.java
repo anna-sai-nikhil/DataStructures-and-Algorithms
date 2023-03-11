@@ -21,8 +21,10 @@ public class Stack {
         System.out.println(array[count-1]);
     }
     public int pop(){
-        if(count==0) throw new RuntimeException("Deklo bai");
+        //if(count==0) throw new RuntimeException("Deklo bai");
         return array[--count];
+        
+
     }
 
 

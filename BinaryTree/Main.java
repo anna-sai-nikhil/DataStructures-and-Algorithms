@@ -3,9 +3,11 @@ package BinaryTree;
 public class Main {
     public static void main(String[] args){
         BinaryTree tree = new BinaryTree();
-        int[] a = {10,5,15,6,1,8,12,18,17};
+        BinaryTree tree2 = new BinaryTree();
+        int[] a = {7,4,9,1,6,8,10,-8,-7};
         for(int i:a) tree.insert(i);
-        for(int i:a) System.out.println(tree.contains(i));
+        for(int i:a) tree2.insert(i);
+        System.out.println(tree.equals(tree2));
 
     }
 }

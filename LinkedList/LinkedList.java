@@ -92,22 +92,23 @@ public class LinkedList {
 
     }
 
-    /*public void reverse() {
+    public void reverse() {
         Node nikhil = head.next;
         Node sunil = head;
-        Node roop = head.next;
+        tail=head;tail.next=null;
         while (nikhil.next != null) {
-            roop = nikhil.next;
+            var roop = nikhil.next;
             nikhil.next = sunil;
-            nikhil =roop =roop.next;
-            sunil =roop;
+            sunil = nikhil;            
+            nikhil = roop;
+            
             
             
         }
-        tail=head;tail.next=null;
-        head=nikhil;
+        
+        head=sunil;
 
-    }*/
+    }
     public int kthNodeFromEnd(int k){
         Node dummy = head;
         Node p = head;
@@ -119,5 +120,30 @@ public class LinkedList {
         }
         return p.value;
     }
-
+    public int[] middleValue(){
+        int middle=0;
+        Node dummy = head;
+        Node m =head;
+        Node n = head;
+        int cnt=0;
+        int i=0;
+        int j=0;
+        while(dummy!=null){
+            middle=(cnt+1)/2;
+            if(i<middle){
+                if(j++>0) n=n.next; 
+                m=m.next;
+                i++;
+            }
+            dummy=dummy.next;
+            cnt++;
+        }
+        if((cnt%2) ==0){
+            int[] mm = {n.value,m.value};
+            return mm;
+        } else {
+            int[] mm={m.value};
+            return mm;
+        }
+    }
 }
